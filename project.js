@@ -7,13 +7,15 @@ function getApi() {
     })
     
     .done(function(response){
-        let data = response.photos.img_src;
-        for (i=0; i<3; i++) {
-            let img = $('<img>');
-            img.attr('src', data[i]);
-            $("#test").append(img);
-        }
+        let data = response.photos[0].img_src;
         console.log('donnéeApi',data);
+
+        for (i=0; i<3; i++) {
+            var img = $('<img>');
+            img.attr('src', response.photos[i].img_src);
+            $("#photo").append(img);
+        }
+        
     })
     
     .fail(function(error){
