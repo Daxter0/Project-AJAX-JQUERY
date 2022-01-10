@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Space Jostanis</title>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="project.js"></script>
 </head>
-<body>
-    <button style="padding:10px;border:solid black 1px;width:70px;" onClick="clickBt()">Click !</button>
-	<div id="test"> </div>
-</body>
-
-<script>
-
-function clickBt() {
-    $('#test')$.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=5cWCTMBoQgodjG7buCNiFJR1upmE4DkcU5DaegbL");
-}
-</script>
+    <body>
+        <button style="padding:10px;border:solid black 1px;width:70px;" onclick="getApi()">Click !</button>
+	    <div id="test"></div>
+    </body>
 </html>
