@@ -1,4 +1,4 @@
-function getApi() {
+function getApiSpiderMan() {
     console.log('getApi est lancée');
     $.ajax({
         url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
@@ -10,7 +10,7 @@ function getApi() {
         let data = response.results[0].summary_short;
         let para = $('<p>');
         para.attr('id', 'par0');
-        $("#photo").append(para);
+        $("#spiderMan").append(para);
         $("#par0").append(data);
         console.log(data);
     })
@@ -22,8 +22,9 @@ function getApi() {
     .always(function(){
         console.log("Requête effectuée");
     })
+}
 
-
+function getApiSpiderMan1() {
 
     $.ajax({
         url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
@@ -35,7 +36,7 @@ function getApi() {
         let data = response.results[4].summary_short;
         let para = $('<p>');
         para.attr('id', 'par1');
-        $("#photo").append(para);
+        $("#spiderMan1").append(para);
         $("#par1").append(data);
         console.log(data);
     })
@@ -48,7 +49,9 @@ function getApi() {
         console.log("Requête effectuée");
     })
 
+}
 
+function getApiSpiderMan2() {
 
     $.ajax({
         url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
@@ -60,7 +63,7 @@ function getApi() {
         let data = response.results[8].summary_short;
         let para = $('<p>');
         para.attr('id', 'par2');
-        $("#photo").append(para);
+        $("#spiderMan2").append(para);
         $("#par2").append(data);
         console.log(data);
     })
