@@ -1,21 +1,18 @@
 function getApi() {
     console.log('getApi est lancée');
     $.ajax({
-        url: "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=rGXWGlOm6oQKxNkyXw2p4on398eNjYc2zbhenhLK",
+        url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
         method: "GET",
         dataType: "json",
     })
     
     .done(function(response){
-        let data = response.photos[0].img_src;
-        console.log('donnéeApi',data);
-
-        for (i=0; i<3; i++) {
-            var img = $('<img>');
-            img.attr('src', response.photos[i].img_src);
-            $("#photo").append(img);
-        }
-        
+        let data = response.results[0].summary_short;
+        let para = $('<p>');
+        para.attr('id', 'par');
+        $("#photo").append(para);
+        $("#par").append(data);
+        console.log(data);
     })
     
     .fail(function(error){
