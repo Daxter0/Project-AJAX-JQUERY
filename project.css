@@ -1,8 +1,6 @@
 #button {
     display: flex;
     justify-content: space-around;
-    border:solid black 1px;
-    width:auto;
 }
 
 div {
