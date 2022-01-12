@@ -9,5 +9,19 @@ div {
     display: flex;
 }
 
+#spiderMan {
+    display: flex;
+    width: 100vh;
+}
+
+#spiderMan1 {
+    display: flex;
+    width: 100vh;
+}
+
+#spiderMan2 {
+    display: flex;
+    width: 100vh;
+}
 
 
