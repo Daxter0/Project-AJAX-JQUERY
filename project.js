@@ -205,7 +205,7 @@ function getApiSpiderManAmazingDate() {
             console.log("Requête effectuée");
         })
     } else {
-        $('#parAmazing').fadeToggle("slow", "linear"); 
+        $('#parAmazingDate').fadeToggle("slow", "linear"); 
     }
 }
 
