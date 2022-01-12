@@ -17,8 +17,8 @@ function getApiSpiderMan() {
             $("#spiderMan").append(para);
             $("#par0").append("<strong>Title :</strong><br/>");
             $("#par0").append(data);
-            $("#par0").hide(1);
-            $("#par0").show($('#par0').fadeIn("slow", "linear"));
+            // $("#par0").hide(1);
+            // $("#par0").show($('#par0').fadeToggle("slow", "linear"));
             console.log(data);
         })
         
@@ -56,8 +56,8 @@ function getApiSpiderManNo() {
             $("#spiderMan").append(para);
             $("#parNo").append("<strong>Summary :</strong><br/>");
             $("#parNo").append(data);
-            $("#parNo").hide(1);
-            $("#parNo").show($('#parNo').fadeIn("slow", "linear"));
+            // $("#parNo").hide(1);
+            // $("#parNo").show($('#parNo').fadeToggle("slow", "linear"));
             console.log(data);
         })
         
@@ -92,8 +92,8 @@ function getApiSpiderManNoDate() {
             $("#spiderMan").append(para);
             $("#parNoDate").append("<strong>Opening date :</strong><br/>");
             $("#parNoDate").append(data);
-            $("#parNoDate").hide(1);
-            $("#parNoDate").show($('#parNoDate').fadeIn("slow", "linear"));
+            // $("#parNoDate").hide(1);
+            // $("#parNoDate").show($('#parNoDate').fadeToggle("slow", "linear"));
             console.log(data);
         })
         
@@ -125,8 +125,8 @@ function getApiSpiderMan1() {
             $("#spiderMan1").append(para);
             $("#par1").append("<strong>Title :</strong><br/>");
             $("#par1").append(data);
-            $("#par1").hide(1);
-            $("#par1").show($('#par1').fadeIn("slow", "linear"));
+            // $("#par1").hide(1);
+            // $("#par1").show($('#par1').fadeIn("slow", "linear"));
             console.log(data);
         })
         
@@ -160,8 +160,8 @@ function getApiSpiderManAmazing() {
             $("#spiderMan1").append(para);
             $("#parAmazing").append("<strong>Summary :</strong><br/>");
             $("#parAmazing").append(data);
-            $("#parAmazing").hide(1);
-            $("#parAmazing").show($('#parAmazing').fadeIn("slow", "linear"));
+            // $("#parAmazing").hide(1);
+            // $("#parAmazing").show($('#parAmazing').fadeIn("slow", "linear"));
             console.log(data);
         })
         
@@ -192,8 +192,8 @@ function getApiSpiderManAmazingDate() {
             $("#spiderMan1").append(para);
             $("#parAmazingDate").append("<strong>Opening date :</strong><br/>");
             $("#parAmazingDate").append(data);
-            $("#parAmazingDate").hide(1);
-            $("#parAmazingDate").show($('#parAmazingDate').fadeIn("slow", "linear"));
+            // $("#parAmazingDate").hide(1);
+            // $("#parAmazingDate").show($('#parAmazingDate').fadeIn("slow", "linear"));
             console.log(data);
         })
         
@@ -224,8 +224,8 @@ function getApiSpiderMan2() {
             $("#spiderMan2").append(para);
             $("#par2").append("<strong>Title :</strong><br/>");
             $("#par2").append(data);
-            $("#par2").hide(1);
-            $("#par2").show($('#par2').fadeIn("slow", "linear"));
+            // $("#par2").hide(1);
+            // $("#par2").show($('#par2').fadeIn("slow", "linear"));
             console.log(data);
         })
         
@@ -259,8 +259,8 @@ function getApiSpiderManYo() {
             $("#spiderMan2").append(para);
             $("#parYo").append("<strong>Summary :</strong><br/>");
             $("#parYo").append(data);
-            $("#parYo").hide(1);
-            $("#parYo").show($('#parYo').fadeIn("slow", "linear"));
+            // $("#parYo").hide(1);
+            // $("#parYo").show($('#parYo').fadeIn("slow", "linear"));
             console.log(data);
         })
         
@@ -291,8 +291,8 @@ function getApiSpiderManYoDate() {
             $("#spiderMan2").append(para);
             $("#parYoDate").append("<strong>Opening date :</strong><br/>");
             $("#parYoDate").append(data);
-            $("#parYoDate").hide(1);
-            $("#parYoDate").show($('#parYoDate').fadeIn("slow", "linear"));
+            // $("#parYoDate").hide(1);
+            // $("#parYoDate").show($('#parYoDate').fadeIn("slow", "linear"));
             console.log(data);
         })
         
@@ -345,3 +345,10 @@ $(function(){
         $('#all').fadeToggle("slow", "linear");
     }
 }
+
+// $('.caroussel').slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//   });
