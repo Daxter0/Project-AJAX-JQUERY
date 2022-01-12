@@ -1,4 +1,4 @@
-function getApiSpiderMan() {
+function getApiSpiderManNoWayHome() {
         
     if ( $('#spiderMan').is(':empty') ) {
 
@@ -110,7 +110,7 @@ function getApiSpiderManNoDate() {
     }
 }
 
-function getApiSpiderMan1() {
+function getApiSpiderManAmazing() {
     if ( $('#spiderMan1').is(':empty') ) {
         $.ajax({
             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
@@ -141,11 +141,11 @@ function getApiSpiderMan1() {
         $('#par1').fadeToggle("slow", "linear"); 
     }
 
-    getApiSpiderManAmazing();
+    getApiSpiderManAmazingSummary();
     getApiSpiderManAmazingDate();
 }
 
-function getApiSpiderManAmazing() {
+function getApiSpiderManAmazingSummary() {
     if ( $('#spiderMan1').is(':empty') ) {
         $.ajax({
             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
@@ -209,7 +209,7 @@ function getApiSpiderManAmazingDate() {
     }
 }
 
-function getApiSpiderMan2() {
+function getApiSpiderMan() {
     if ( $('#spiderMan2').is(':empty') ) {
         $.ajax({
             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
@@ -240,11 +240,11 @@ function getApiSpiderMan2() {
         $('#par2').fadeToggle("slow", "linear");
     }
 
-    getApiSpiderManYo();
-    getApiSpiderManYoDate();
+    getApiSpiderManSummary();
+    getApiSpiderManDate();
 }
 
-function getApiSpiderManYo() {
+function getApiSpiderManSummary() {
     if ( $('#spiderMan2').is(':empty') ) {
         $.ajax({
             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
@@ -276,7 +276,7 @@ function getApiSpiderManYo() {
     }
 }
 
-function getApiSpiderManYoDate() {
+function getApiSpiderManDate() {
     if ( $('#spiderMan2').is(':empty') ) {
         $.ajax({
             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
