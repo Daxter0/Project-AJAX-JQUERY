@@ -7,37 +7,37 @@ div {
     display: flex;
 }
 
+#spiderManNoWayHome {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+}
+
+#spiderManNoWayHomePic {
+    width: 350px; 
+    height: 200px;
+}
+
 #spiderMan {
     display: flex;
     flex-direction: column;
     width: 100vh;
+    margin-left: 5px;
 }
 
-#noWayHomePic {
+#spiderManPic{
     width: 350px; 
     height: 200px;
 }
 
-#spiderMan1 {
+#spiderManAmazing {
     display: flex;
     flex-direction: column;
     width: 100vh;
     margin-left: 5px;
 }
 
-#spiderMan2Pic{
-    width: 350px; 
-    height: 200px;
-}
-
-#spiderMan2 {
-    display: flex;
-    flex-direction: column;
-    width: 100vh;
-    margin-left: 5px;
-}
-
-#spiderManPic {
+#spiderManAmazingPic {
     width: 350px; 
     height: 200px;
 }

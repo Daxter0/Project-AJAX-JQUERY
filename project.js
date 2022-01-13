@@ -1,5 +1,4 @@
 function getApiSpiderManNoWayHome() {
-        
     if ( $('#spiderManNoWayHome').is(':empty') ) {
 
         console.log('getApi est lancée');
@@ -11,14 +10,27 @@ function getApiSpiderManNoWayHome() {
         })
         
         .done(function(response){
-            let data = response.results[0].display_title;
-            let data2 = response.results[0].summary_short;
-            let data3 = response.results[0].opening_date;
+            let dataNoWayHomeTitle = response.results[0].display_title;
+            let dataNoWayHomeSummary = response.results[0].summary_short;
+            let dataNoWayHomeDate = response.results[0].opening_date;
+            let dataAmazingTitle = response.results[4].display_title;
+            let dataAmazingSummary = response.results[4].summary_short;
+            let dataAmazingDate = response.results[4].opening_date;
+            let dataTitle = response.results[8].display_title;
+            let dataSummary = response.results[8].summary_short;
+            let dataDate = response.results[8].opening_date;
+            let paraNoWayHome = $('<p>');
+            paraNoWayHome.attr('id', 'paraNoWayHome');
+            $("#spiderManNoWayHome").append(paraNoWayHome);
+            $("#paraNoWayHome").append("<strong>Title :</strong><br/>" + dataNoWayHomeTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataNoWayHomeSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataNoWayHomeDate).hide(1).fadeToggle("slow", "linear");
+            let paraAmazing = $('<p>');
+            paraAmazing.attr('id', 'paraAmazing');
+            $("#spiderManAmazing").append(paraAmazing);
+            $("#paraAmazing").append("<strong>Title :</strong><br/>" + dataAmazingTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataAmazingSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataAmazingDate).hide(1);
             let para = $('<p>');
-            para.attr('id', 'par0');
-            $("#spiderManNoWayHome").append(para);
-            $("#par0").append("<strong>Title :</strong><br/>" + data + "<br/><br/><strong>Summary :</strong><br/>" + data2 + "<br/><br/><strong>Opening date :</strong><br/>" + data3).hide(1).fadeToggle("slow", "linear");
-            console.log(data);
+            para.attr('id', 'para');
+            $("#spiderMan").append(para);
+            $("#para").append("<strong>Title :</strong><br/>" + dataTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataDate).hide(1);
         })
         
         .fail(function(error){
@@ -30,13 +42,16 @@ function getApiSpiderManNoWayHome() {
         })
 
     } else {
-        $('#par0').fadeToggle("slow", "linear");
+        $('#paraNoWayHome').fadeToggle("slow", "linear");
     }
-    
 }
 
 function getApiSpiderManAmazing() {
+
     if ( $('#spiderManAmazing').is(':empty') ) {
+
+        console.log('getApi est lancée');
+
         $.ajax({
             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
             method: "GET",
@@ -44,14 +59,27 @@ function getApiSpiderManAmazing() {
         })
         
         .done(function(response){
-            let data = response.results[4].display_title;
-            let data2 = response.results[4].summary_short;
-            let data3 = response.results[4].opening_date;
+            let dataNoWayHomeTitle = response.results[0].display_title;
+            let dataNoWayHomeSummary = response.results[0].summary_short;
+            let dataNoWayHomeDate = response.results[0].opening_date;
+            let dataAmazingTitle = response.results[4].display_title;
+            let dataAmazingSummary = response.results[4].summary_short;
+            let dataAmazingDate = response.results[4].opening_date;
+            let dataTitle = response.results[8].display_title;
+            let dataSummary = response.results[8].summary_short;
+            let dataDate = response.results[8].opening_date;
+            let paraNoWayHome = $('<p>');
+            paraNoWayHome.attr('id', 'paraNoWayHome');
+            $("#spiderManNoWayHome").append(paraNoWayHome);
+            $("#paraNoWayHome").append("<strong>Title :</strong><br/>" + dataNoWayHomeTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataNoWayHomeSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataNoWayHomeDate).hide(1);
+            let paraAmazing = $('<p>');
+            paraAmazing.attr('id', 'paraAmazing');
+            $("#spiderManAmazing").append(paraAmazing);
+            $("#paraAmazing").append("<strong>Title :</strong><br/>" + dataAmazingTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataAmazingSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataAmazingDate).hide(1).fadeToggle("slow", "linear");
             let para = $('<p>');
-            para.attr('id', 'par1');
-            $("#spiderManAmazing").append(para);
-            $("#par1").append("<strong>Title :</strong><br/>" + data + "<br/><br/><strong>Summary :</strong><br/>" + data2 + "<br/><br/><strong>Opening date :</strong><br/>" + data3).hide(1).fadeToggle("slow", "linear");
-            console.log(data);
+            para.attr('id', 'para');
+            $("#spiderMan").append(para);
+            $("#para").append("<strong>Title :</strong><br/>" + dataTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataDate).hide(1);
         })
         
         .fail(function(error){
@@ -61,13 +89,18 @@ function getApiSpiderManAmazing() {
         .always(function(){
             console.log("Requête effectuée");
         })
+
     } else {
-        $('#par1').fadeToggle("slow", "linear"); 
+        $('#paraAmazing').fadeToggle("slow", "linear");
     }
 }
 
 function getApiSpiderMan() {
+
     if ( $('#spiderMan').is(':empty') ) {
+
+        console.log('getApi est lancée');
+
         $.ajax({
             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
             method: "GET",
@@ -75,14 +108,27 @@ function getApiSpiderMan() {
         })
         
         .done(function(response){
-            let data = response.results[8].display_title;
-            let data2 = response.results[8].summary_short;
-            let data3 = response.results[8].opening_date;
+            let dataNoWayHomeTitle = response.results[0].display_title;
+            let dataNoWayHomeSummary = response.results[0].summary_short;
+            let dataNoWayHomeDate = response.results[0].opening_date;
+            let dataAmazingTitle = response.results[4].display_title;
+            let dataAmazingSummary = response.results[4].summary_short;
+            let dataAmazingDate = response.results[4].opening_date;
+            let dataTitle = response.results[8].display_title;
+            let dataSummary = response.results[8].summary_short;
+            let dataDate = response.results[8].opening_date;
+            let paraNoWayHome = $('<p>');
+            paraNoWayHome.attr('id', 'paraNoWayHome');
+            $("#spiderManNoWayHome").append(paraNoWayHome);
+            $("#paraNoWayHome").append("<strong>Title :</strong><br/>" + dataNoWayHomeTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataNoWayHomeSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataNoWayHomeDate).hide(1);
+            let paraAmazing = $('<p>');
+            paraAmazing.attr('id', 'paraAmazing');
+            $("#spiderManAmazing").append(paraAmazing);
+            $("#paraAmazing").append("<strong>Title :</strong><br/>" + dataAmazingTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataAmazingSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataAmazingDate).hide(1);
             let para = $('<p>');
-            para.attr('id', 'par2');
+            para.attr('id', 'para');
             $("#spiderMan").append(para);
-            $("#par2").append("<strong>Title :</strong><br/>" + data + "<br/><br/><strong>Summary :</strong><br/>" + data2 + "<br/><br/><strong>Opening date :</strong><br/>" + data3).hide(1).fadeToggle("slow", "linear");
-            console.log(data);
+            $("#para").append("<strong>Title :</strong><br/>" + dataTitle + "<br/><br/><strong>Summary :</strong><br/>" + dataSummary + "<br/><br/><strong>Opening date :</strong><br/>" + dataDate).hide(1).fadeToggle("slow", "linear");
         })
         
         .fail(function(error){
@@ -92,8 +138,9 @@ function getApiSpiderMan() {
         .always(function(){
             console.log("Requête effectuée");
         })
+
     } else {
-        $('#par2').fadeToggle("slow", "linear");
+        $('#para').fadeToggle("slow", "linear");
     }
 }
 
@@ -104,37 +151,3 @@ $(function(){
        })
     }, 3500);
 });
-
-
-//  function getApi() {
-//     if ( $('#allApi').is(':empty') ) {
-//         $.ajax({
-//             url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=spider-man&api-key=i3jDjs39SaK9GfHKA72J6C3RcpRqZbcD",
-//             method: "GET",
-//             dataType: "json",
-//         })
-        
-//         .done(function(response){
-//             let data = response.results[5].display_title;
-//             let data2 = response.results[5].summary_short;
-//             let data3 = response.results[5].opening_date;
-//             let para = $('<p>');
-//             para.attr('id', 'all');
-//             $("#allApi").append(para);
-//             $("#all").append(data);
-//             $("#all").append(data2);
-//             $("#all").append(data3);
-//             console.log(data);
-//         })
-        
-//         .fail(function(error){
-//             console.log("La requête s'est terminée en échec. Infos : " + JSON.stringify(error));
-//         })
-
-//         .always(function(){
-//             console.log("Requête effectuée");
-//         })
-//     } else {
-//         $('#all').fadeToggle("slow", "linear");
-//     }
-// }
