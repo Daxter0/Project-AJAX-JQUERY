@@ -6,30 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Space Jostanis</title>
     <link rel="stylesheet" href="project.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">    <video id="background-video" autoplay loop muted>
-        <source src="./img/Séquence  01.mp4" type="video/mp4">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <video id="background-video" autoplay loop muted><source src="./img/Séquence  01.mp4" type="video/mp4"></video>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-      </video></head>
+</head>
     <body>
-        <div id="caroussel">
-            <ul>
-                <li><img id ="spiderManNoWayHomePic" src="./img/NoWayHome.png"/></li>
-                <li><img id="spiderManAmazingPic" src="./img/spiderman.png"/></li>
-                <li><img id="spiderManPic" src="./img/spiderman1.png"/></li>
-            </ul>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="./img/NoWayHome.jpg"/>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/spiderman.jpg"/>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/spiderman1.jpg"/>
+            </div>
         </div>
         <div id ="button">
             <button onclick="getApiSpiderManNoWayHome()">Spider-Man </br>No Way home</button>
             <button onclick="getApiSpiderManAmazing()">Amazing Spider-Man</button>
             <button onclick="getApiSpiderMan()">Spider-Man</button>
-            <!-- <button onclick="getApi()">getAllApi</button> -->
         </div>
         <div class="allPara">
             <div id="spiderManNoWayHome"></div>
             <div id="spiderManAmazing"></div>
             <div id="spiderMan"></div>
         </div>
-        <!-- <div id="allApi"></div> -->
     </body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="project.js"></script>

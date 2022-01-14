@@ -1,23 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+}
+
+#spiderManNoWayHome {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    margin-left: 5px;
+}
+
+#spiderManAmazing {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    margin-left: 5px;
+}
+
+#spiderMan {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    margin-left: 5px;
+}
+
 #button {
     display: flex;
     justify-content: space-around;
-    margin-top: 100px;
-    margin-bottom: 50px;
-  
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 button {
-    
     color:antiquewhite;
-    
     width: 200px;
     height: 70px;
     border-radius: 10px;
     background: url(./img/Insolite-un-pansement-avec-des-toiles-d-araignees.jpg);
     font-family: 'Bebas Neue', cursive;
     font-size: 28px;
-    
 }
+
 #background-video {
     height: 100vh;
     width: 100vw;
@@ -28,70 +54,32 @@ button {
     top: 0;
     bottom: 0;
     z-index: -1;
-  }
-
-
-div {
-    display: flex;
 }
+
 .allPara{
     color: aliceblue;
     font-family: 'Josefin Sans', sans-serif;
-    
-}
-#spiderManNoWayHome {
-    display: flex;
-    flex-direction: column;
-    width: 100vh;
-    
 }
 
-#spiderManNoWayHomePic {
-    width: 350px; 
-    height: 200px;
-}
-
-#spiderMan {
-    display: flex;
-    flex-direction: column;
-    width: 100vh;
-    margin-left: 5px;
-}
-
-#spiderManPic{
-    width: 350px; 
-    height: 200px;
-}
-
-#spiderManAmazing {
-    display: flex;
-    flex-direction: column;
-    width: 100vh;
-    margin-left: 5px;
-}
-
-#spiderManAmazingPic {
-    width: 350px; 
-    height: 200px;
-}
-
-#caroussel {
-    margin: auto;
-    width: 350px;
-    height: 200px;
+.carousel {
+    position: relative;
+    width: 445px;
+    height: 250px;
     overflow: hidden;
-    
-}
- 
-#caroussel ul {
-    width: 300%;
-    height: 200px;
-    padding:0; margin:0;
-    list-style: none;
-}
+    background-color: #cdcdcd;
+    margin: auto; 
+    border-radius: 10px;
+} 
 
-#caroussel li {
-    float: left;
+.carousel-item { 
+    position: absolute;
+    width: 445px;
+    height: 250px;
+    top: 0;
+    left: 100%;
+}    
+
+.active {
+    left: 0;
+    transition: all 0.3s ease-out;
 }
-
-
