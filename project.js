@@ -150,7 +150,7 @@ window.onload = function(){
         removeActive = function(slide) {slide.classList.remove('active')};
     addActive(slides[0]);
     
-    setInterval(function (){
+    setInterval(function () {
       for (var i = 0; i < slides.length; i++){
         if (i + 1 == slides.length) {
           addActive(slides[0]);
@@ -166,4 +166,4 @@ window.onload = function(){
         }
       } 
     }, 4000);
-  }
+}
