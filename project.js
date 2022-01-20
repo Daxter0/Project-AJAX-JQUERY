@@ -145,9 +145,10 @@ function getApiSpiderMan() {
 }
 
 window.onload = function(){
-    var slides = document.getElementsByClassName('carousel-item'),
-        addActive = function(slide) {slide.classList.add('active')},
-        removeActive = function(slide) {slide.classList.remove('active')};
+    var slides = document.getElementsByClassName('carousel-item');
+    addActive = function(slide) {slide.classList.add('active')};
+    removeActive = function(slide) {slide.classList.remove('active')};
+
     addActive(slides[0]);
     
     setInterval(function () {
